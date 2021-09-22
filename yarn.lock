@@ -2441,10 +2441,10 @@
     lodash "^4.17.15"
     pretty "^2.0.0"
 
-"@vue/theme@^0.1.5":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@vue/theme/-/theme-0.1.5.tgz#2a779692d5704bd9d8fac36d69116bca16dfa594"
-  integrity sha512-c/aiXXyvE8jKYhX5X22iUwais9xih31dTESG4yv4WZpRPuT4vfx46woTKtbFPaMdrZBm4veSRuiMP+FRKiVphg==
+"@vue/theme@^0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@vue/theme/-/theme-0.1.10.tgz#46483e437db0ea635dfc32fe193c276d937908f2"
+  integrity sha512-zd2NS1d1sqjZmw+nwNiFXMfwwhif7KXOE3SGwxaieDZAenIUpIyBEwphJOqTd69HIS6/IolBA/KY2CGi34v7rA==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
