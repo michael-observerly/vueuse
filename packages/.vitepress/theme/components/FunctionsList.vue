@@ -4,7 +4,6 @@ import Fuse from 'fuse.js'
 import { functions, categories } from '../../../../meta/function-indexes'
 
 // TODO: Sort by recent updated
-// TODO: Categorized
 // TODO: Reactive to hash
 
 const coreCategories = categories.filter(i => !i.startsWith('@'))

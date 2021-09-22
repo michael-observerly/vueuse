@@ -11,7 +11,7 @@ export function ChangeLog(): Plugin {
     },
     async load(id) {
       if (id !== ID) return null
-      return `export default ${JSON.stringify(await getChangeLog(200))}`
+      return `export default ${JSON.stringify(await getChangeLog(400))}`
     },
   }
 }

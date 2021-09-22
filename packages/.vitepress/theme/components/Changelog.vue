@@ -53,11 +53,11 @@ const commits = computed(() => {
         <octicon-git-commit-16 class="m-auto transform rotate-90 opacity-30" />
         <div>
           <a :href="`https://github.com/vueuse/vueuse/commit/${commit.hash}`" target="_blank">
-            <code class="!text-$vt-c-text-2 !hover:text-primary">{{ commit.hash.slice(0, 5) }}</code>
+            <code class="!text-xs !text-$vt-c-text-2 !hover:text-primary">{{ commit.hash.slice(0, 5) }}</code>
           </a>
           <span text="sm">
             -
-            <span v-html="renderCommitMessage(commit.message)"></span>
+            <span v-html="renderCommitMessage(commit.message.replace(`(${fn})`, ''))"></span>
           </span>
         </div>
       </template>
