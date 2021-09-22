@@ -7,6 +7,8 @@ declare module 'vue' {
     BooleanDisplay: typeof import('./theme/components/BooleanDisplay.vue')['default']
     'Carbon:arrowRight': typeof import('~icons/carbon/arrow-right')['default']
     'Carbon:logoGithub': typeof import('~icons/carbon/logo-github')['default']
+    CarbonCheckmark: typeof import('~icons/carbon/checkmark')['default']
+    CarbonError: typeof import('~icons/carbon/error')['default']
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSearch: typeof import('~icons/carbon/search')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
