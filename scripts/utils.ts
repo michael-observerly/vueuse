@@ -121,6 +121,8 @@ export async function readIndexes() {
       const fn: VueUseFunction = {
         name: fnName,
         package: pkg.name,
+        // TODO: READ FROM MTIME
+        lastUpdated: 0,
       }
 
       if (fs.existsSync(join(dir, fnName, 'component.ts')))
