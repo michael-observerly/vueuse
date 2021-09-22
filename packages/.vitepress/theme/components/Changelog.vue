@@ -46,7 +46,7 @@ const commits = computed(() => {
           >
             <code class="!text-primary font-bold">{{ commit.version }}</code>
           </a>
-          <span class="opacity-50 text-xs">on {{ new Date(commit.date).toLocaleDateString() }}</span>
+          <span class="opacity-50 text-xs"> on {{ new Date(commit.date).toLocaleDateString() }}</span>
         </div>
       </template>
       <template v-else>
