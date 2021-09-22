@@ -110,20 +110,21 @@
     }
   },
   "categories": [
+    "Animation",
+    "Browser",
+    "Component",
+    "Elements",
+    "Misc",
+    "Network",
+    "Sensors",
+    "State",
+    "Utilities",
+    "Watch",
     "@Electron",
     "@Firebase",
     "@Integrations",
     "@Router",
-    "@RxJS",
-    "Animation",
-    "Browser",
-    "Component",
-    "Formatters",
-    "Misc",
-    "Sensors",
-    "State",
-    "Utilities",
-    "Watch"
+    "@RxJS"
   ],
   "functions": [
     {
@@ -548,7 +549,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useActiveElement/",
-      "category": "Browser",
+      "category": "Elements",
       "description": "reactive `document.activeElement`"
     },
     {
@@ -556,7 +557,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useAsyncState/",
-      "category": "Utilities",
+      "category": "State",
       "description": "reactive async state"
     },
     {
@@ -615,7 +616,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useDebouncedRefHistory/",
-      "category": "Utilities",
+      "category": "State",
       "description": "shorthand for `useRefHistory` with debounced filter"
     },
     {
@@ -660,7 +661,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useDocumentVisibility/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactively track [`document.visibilityState`](https://developer.mozilla.org/en-US/docs/Web/API/Document/visibilityState)"
     },
     {
@@ -669,7 +670,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useDraggable/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "make elements draggable"
     },
     {
@@ -678,7 +679,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useElementBounding/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactive [bounding box](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) of an HTML element"
     },
     {
@@ -687,7 +688,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useElementSize/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactive size of an HTML element"
     },
     {
@@ -696,7 +697,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useElementVisibility/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "tracks the visibility of an element within the viewport"
     },
     {
@@ -720,7 +721,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useEventSource/",
-      "category": "Misc",
+      "category": "Network",
       "description": "an [EventSource](https://developer.mozilla.org/en-US/docs/Web/API/EventSource) or [Server-Sent-Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events) instance opens a persistent connection to an HTTP server"
     },
     {
@@ -736,7 +737,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useFetch/",
-      "category": "Browser",
+      "category": "Network",
       "description": "reactive [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) provides the ability to abort requests"
     },
     {
@@ -771,7 +772,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useIntersectionObserver/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "detects that a target element's visibility"
     },
     {
@@ -803,7 +804,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useManualRefHistory/",
-      "category": "Utilities",
+      "category": "State",
       "description": "manually track the change history of a ref when the using calls `commit()`"
     },
     {
@@ -837,7 +838,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useMouseInElement/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactive mouse position related to an element"
     },
     {
@@ -854,7 +855,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useMutationObserver/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "watch for changes being made to the DOM tree"
     },
     {
@@ -966,7 +967,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useRefHistory/",
-      "category": "Utilities",
+      "category": "State",
       "description": "track the change history of a ref"
     },
     {
@@ -974,7 +975,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useResizeObserver/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reports changes to the dimensions of an Element's content or the border-box"
     },
     {
@@ -1046,7 +1047,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useThrottledRefHistory/",
-      "category": "Utilities",
+      "category": "State",
       "description": "shorthand for `useRefHistory` with throttled filter"
     },
     {
@@ -1055,7 +1056,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useTimeAgo/",
-      "category": "Formatters",
+      "category": "Misc",
       "description": "reactive time ago"
     },
     {
@@ -1137,7 +1138,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useWebSocket/",
-      "category": "Misc",
+      "category": "Network",
       "description": "reactive [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/WebSocket) client"
     },
     {
@@ -1154,7 +1155,7 @@
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useWebWorkerFn/",
       "category": "Misc",
-      "description": "run expensive function without blocking the UI"
+      "description": "run expensive functions without blocking the UI"
     },
     {
       "name": "useWindowFocus",
@@ -1162,7 +1163,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useWindowFocus/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactively track window focus with `window.onfocus` and `window.onblur` events"
     },
     {
@@ -1170,7 +1171,7 @@
       "package": "core",
       "lastUpdated": 0,
       "docs": "https://vueuse.org/core/useWindowScroll/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactive window scroll"
     },
     {
@@ -1179,7 +1180,7 @@
       "lastUpdated": 0,
       "component": true,
       "docs": "https://vueuse.org/core/useWindowSize/",
-      "category": "Sensors",
+      "category": "Elements",
       "description": "reactive window size"
     },
     {

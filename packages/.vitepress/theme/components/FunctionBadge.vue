@@ -21,8 +21,9 @@ function parseMarkdown(markdownText = '') {
 </script>
 
 <template>
-  <div text="sm">
+  <div text="sm" class="whitespace-nowrap overflow-hidden overflow-ellipsis">
     <a :href="`/${fn.package}/${fn.name}`" bg="gray-400/5" p="x-2 y-0.5">{{ fn.name }}</a>
-    - <span v-html="parseMarkdown(fn.description)"></span>
+    -
+    <span class="overflow-hidden overflow-ellipsis" v-html="parseMarkdown(fn.description)"></span>
   </div>
 </template>

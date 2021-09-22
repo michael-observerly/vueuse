@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import Fuse from 'fuse.js'
-import { coreFunctions, coreCategories } from '../../../../meta/function-indexes'
+import { functions, categories } from '../../../../meta/function-indexes'
 
 // TODO: Filter by components/directives
 // TODO: Sort by recent updated
@@ -13,8 +13,8 @@ const enabledCategories = ref<string[]>([])
 
 const items = computed(() => {
   if (enabledCategories.value.length === 0)
-    return coreFunctions
-  return coreFunctions.filter(item => item.category && enabledCategories.value.includes(item.category))
+    return functions
+  return functions.filter(item => item.category && enabledCategories.value.includes(item.category))
 })
 const fuse = computed(() => new Fuse(items.value, {
   keys: ['name', 'description'],
@@ -34,9 +34,9 @@ function toggleCategory(category: string) {
 </script>
 
 <template>
-  <div flex="~" gap="2" m="b-2">
+  <div flex="~ wrap" gap="2" m="b-2">
     <button
-      v-for="cate of coreCategories"
+      v-for="cate of categories"
       :key="cate"
       p="x-2 y-0.5"
       border="rounded"
