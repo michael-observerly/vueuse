@@ -12,6 +12,8 @@ declare module 'vue' {
     CarbonSun: typeof import('~icons/carbon/sun')['default']
     Changelog: typeof import('./theme/components/Changelog.vue')['default']
     ChangeLog: typeof import('./theme/components/ChangeLog.vue')['default']
+    Components: typeof import('./theme/components/Components.vue')['default']
+    ComponentsGuide: typeof import('./theme/components/ComponentsGuide.vue')['default']
     DemoContainer: typeof import('./theme/components/DemoContainer.vue')['default']
     FunctionBadge: typeof import('./theme/components/FunctionBadge.vue')['default']
     FunctionsList: typeof import('./theme/components/FunctionsList.vue')['default']
