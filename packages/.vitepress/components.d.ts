@@ -10,6 +10,8 @@ declare module 'vue' {
     CarbonMoon: typeof import('~icons/carbon/moon')['default']
     CarbonSearch: typeof import('~icons/carbon/search')['default']
     CarbonSun: typeof import('~icons/carbon/sun')['default']
+    Changelog: typeof import('./theme/components/Changelog.vue')['default']
+    ChangeLog: typeof import('./theme/components/ChangeLog.vue')['default']
     DemoContainer: typeof import('./theme/components/DemoContainer.vue')['default']
     FunctionBadge: typeof import('./theme/components/FunctionBadge.vue')['default']
     FunctionsList: typeof import('./theme/components/FunctionsList.vue')['default']
@@ -19,6 +21,10 @@ declare module 'vue' {
     HomeHero: typeof import('./theme/components/HomeHero.vue')['default']
     LearnMoreComponents: typeof import('./theme/components/LearnMoreComponents.vue')['default']
     Note: typeof import('./theme/components/Note.vue')['default']
+    OcticonGitCommit16: typeof import('~icons/octicon/git-commit16')['default']
+    OcticonGitCommit24: typeof import('~icons/octicon/git-commit24')['default']
+    OcticonGitPullRequestDraft16: typeof import('~icons/octicon/git-pull-request-draft16')['default']
+    OcticonRocket16: typeof import('~icons/octicon/rocket16')['default']
     ReloadPrompt: typeof import('./theme/components/ReloadPrompt.vue')['default']
   }
 }
