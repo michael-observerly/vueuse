@@ -11,7 +11,16 @@ export interface UseInterceptUnloadOptions {
   immediate?: boolean
 }
 
-export const useInterceptUnload = (callback: Function, options: UseInterceptUnloadOptions) => {
+/**
+ * reactive useBeforeUnload()
+ *
+ * @see https://vueuse.org/useBeforeUnload
+ *
+ * @param callback
+ * @param options
+ * @returns
+ */
+export const useBeforeUnload = (callback: Function, options: UseInterceptUnloadOptions) => {
   const {
     immediate = false,
   } = options
@@ -19,7 +28,11 @@ export const useInterceptUnload = (callback: Function, options: UseInterceptUnlo
   const isTracking = ref(immediate)
 
   const beforeUnloadHandler = (e: BeforeUnloadEvent) => {
+    // Cancel the event
     e.preventDefault()
+    // Chrome requires returnValue to be set
+    e.returnValue = ''
+
     callback()
   }
 
