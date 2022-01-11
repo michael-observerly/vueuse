@@ -2,7 +2,7 @@
 category: Sensors
 ---
 
-# useInterceptUnload
+# useBeforeUnload
 
 ## Usage
 

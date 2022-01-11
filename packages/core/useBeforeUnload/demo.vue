@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useInterceptUnload } from '.'
+import { useBeforeUnload } from '.'
 
-const { isTracking } = useInterceptUnload(() => {
+const { isTracking } = useBeforeUnload(() => {
   // Do something: e.g., load something into local storage
 }, {
   immediate: true,
