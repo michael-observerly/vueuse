@@ -61,4 +61,4 @@ export const useBeforeUnload = (callback: Function, options: UseInterceptUnloadO
   }
 }
 
-export type UseInterceptUnloadReturn = ReturnType<typeof useInterceptUnload>
+export type UseInterceptUnloadReturn = ReturnType<typeof useBeforeUnload>
