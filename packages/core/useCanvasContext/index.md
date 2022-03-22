@@ -2,32 +2,32 @@
 category: Browser
 ---
 
-# useCanvas2D
+# useCanvasContext
 
 Reactive [Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API). The Canvas API provides a means for drawing graphics via JavaScript and the HTML `<canvas>` element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
 
 **N.B.** The Canvas API largely focuses on 2D graphics and this composable is designed for specific usage with the 2-dimensional canvas rendering context. 
 
-**N.B.** The WebGL API, which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics is not covered by this composable.
+**N.B.** The WebGL API, which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics.
 
 ## Usage
 
-This is the default usage of useCanvas2D, which simply returns the context for the specified attributes.
+This is the default usage of useCanvasContext, which simply returns the context for the specified attributes.
 
 ```vue
 <template>
-  <canvas ref="canvas" class="w-full h-128 sm:w-128 lg:w-256"/>
+  <canvas ref="canvas" class="h-128 w-full sm:w-128 lg:w-256" />
 </template>
 ```
 
 ```ts
-import { useCanvas2D, useElementBounding, useRafFn } from '@vueuse/core'
+import { useCanvasContext, useElementBounding, useRafFn } from '@vueuse/core'
 
 // This is the canvas HTMLCanvasElement element as a ref:
 const canvas = ref<null | HTMLCanvasElement>(null)
 
 // Get the ctx:
-const { ctx } = useCanvas2D(canvas, { alpha: true, desynchronized: false })
+const { ctx } = useCanvasContext(canvas)
 
 useRafFn(() => {
   if (ctx.value) {
@@ -42,14 +42,14 @@ Sometime's it's useful to have a canvas element that will be reactive to it's bo
 
 ```vue
 <template>
-  <div ref="bound" class="w-full h-128 sm:w-128 lg:w-256">
-    <canvas ref="canvas"/>
+  <div ref="bound" class="h-128 w-full sm:w-128 lg:w-256">
+    <canvas ref="canvas" />
   </div>
 </template>
 ```
 
 ```ts
-import { useCanvas2D, useElementBounding, useRafFn } from '@vueuse/core'
+import { useCanvasContext, useElementBounding, useRafFn } from '@vueuse/core'
 
 const bound = ref<null | HTMLElement>(null)
 
@@ -57,21 +57,16 @@ const bound = ref<null | HTMLElement>(null)
 const canvas = ref<null | HTMLCanvasElement>(null)
 
 // Get the ctx:
-const { ctx } = useCanvas2D(canvas, { alpha: true, desynchronized: false })
+const { ctx } = useCanvasContext(canvas)
 
 // Obtain the bounding element's width and height:
 const { width, height } = useElementBounding(bound)
 
-// Watch for changes to the bounding element's width:
-watch(width, (widthValue) => {
+// Watch for changes to the bounding element's
+watchEffect(() => {
   if (!canvas.value) return
-  canvas.value.width = widthValue
-})
-
-// Watch for changes to the bounding element's height:
-watch(height, (heightValue) => {
-  if (!canvas.value) return
-  canvas.value.height = heightValue
+  canvas.value.width = width.value
+  canvas.value.height = height.value
 })
 
 useRafFn(() => {
