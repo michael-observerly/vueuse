@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { useWebNotification } from '@vueuse/core'
-import type { UseWebNotificationOptions } from '@vueuse/core'
+import { type UseWebNotificationOptions, useWebNotification } from '@vueuse/core'
 
 const options: UseWebNotificationOptions = {
   title: 'Hello, world from VueUse!',
@@ -12,6 +11,8 @@ const options: UseWebNotificationOptions = {
 
 const {
   isSupported,
+  notification,
+  permissionGranted,
   show,
 } = useWebNotification(options)
 </script>
@@ -21,10 +22,13 @@ const {
     <p>
       Supported: <BooleanDisplay :value="isSupported" />
     </p>
+    <p>
+      {{ notification?.title }}
+    </p>
   </div>
 
   <div v-if="isSupported">
-    <button @click="show()">
+    <button :disabled="!permissionGranted" @click="show()">
       Show Notification
     </button>
   </div>

@@ -1,5 +1,4 @@
-import { ref } from 'vue-demi'
-import type { Ref } from 'vue-demi'
+import { type Ref, ref } from 'vue-demi'
 import { createEventHook, tryOnMounted, tryOnScopeDispose } from '@vueuse/shared'
 import type { EventHook } from '@vueuse/shared'
 import { useEventListener } from '../useEventListener'
@@ -133,7 +132,7 @@ export function useWebNotification(
   const { on: onClose, trigger: closeTrigger }: EventHook = createEventHook<Event>()
 
   // Show notification method:
-  const show = async (overrides?: WebNotificationOptions) => {
+  const show = (overrides?: WebNotificationOptions) => {
     // If either the browser does not support notifications or the user has
     // not granted permission, do nothing:
     if (!isSupported.value || !permissionGranted.value)
